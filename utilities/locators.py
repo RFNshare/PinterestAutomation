@@ -39,15 +39,16 @@ class HomePageLocators(object):
     PROFILE_SHARE_BUTTON = (By.XPATH, "//div[text()='Share']")
     # Help Center
     QUESTION_MARK = (By.XPATH, "//div[@class='JME wc1 zI7 iyn Hsu']/div/button[@aria-label='More']")
+    PLUS = (By.XPATH, "//div[@class='JME wc1 zI7 iyn Hsu']/div/button[@aria-label='Add Pin']")
+    CREATE_PIN = "//div[@title='Create a Pin']"
+    VISIT_HELP_CENTER = (By.XPATH, "//div[@title='Visit the Help Center']")
+    GET_OUR_BROWSER = (By.XPATH, "//div[@title='Get our browser button to save ideas even faster']")
+    ABOUT = (By.XPATH, "//div[text()='About']")
 
 
 class AdsPageLocators(object):
     BANNER_TEXT = (By.XPATH, "//p[@class='unauth-homepage-use-case-fashion']")
     PROFILE = (By.XPATH, "//a[@class='Wk9 xQ4 CCY czT INd iyn kVc FTD L4E DI9 BG7']")
-
-
-class HomePageTwoLocators(object):
-    pass
 
 
 class PostPageLocators(object):

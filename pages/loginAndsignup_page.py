@@ -28,6 +28,7 @@ class LoginSignupPage(BasePage):
         pass_field.clear()
         pass_field.send_keys(TestData.DEMO_PASS)
         self.driver.find_element(*self.locators.SUBMIT_BUTTON).click()
+        time.sleep(5)
 
     def signup(self):
         email_filed = self.driver.find_element(*self.locators.EMAIL_INPUT)
@@ -43,6 +44,7 @@ class LoginSignupPage(BasePage):
         age_field.send_keys(TestData.DEMO_AGE)
         time.sleep(2)
         self.driver.find_element(*self.locators.SUBMIT_BUTTON).click()
+        time.sleep(5)
 
     def profile(self):
         profile = self.driver.find_element(*self.ads_locators.PROFILE)
