@@ -45,13 +45,3 @@ class BasePage(object):
     def scroll_up(self):
         self.driver.execute_script("window.scrollTo(0,0)")
 
-    def getLogger(self):
-        loggerName = inspect.stack()[1][3]
-        logger = logging.getLogger(loggerName)
-        fileHandler = logging.FileHandler('data/logfile.log')
-        formatter = logging.Formatter("%(asctime)s :%(levelname)s : %(name)s :%(message)s")
-        fileHandler.setFormatter(formatter)
-        logger.addHandler(fileHandler)  # filehandler object
-        logger.setLevel(logging.DEBUG)
-        return logger
-
