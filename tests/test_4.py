@@ -102,7 +102,6 @@ class TestCase_004(BaseLoginTest):
         time.sleep(2)
         log.info("System show pop up page with others option")
 
-    @pytest.mark.now
     def test_tc_0010(self):
         log = self.getLogger()
         homepage = HomeTwoPage(self.driver)

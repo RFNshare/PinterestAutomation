@@ -52,4 +52,12 @@ class AdsPageLocators(object):
 
 
 class PostPageLocators(object):
-    pass
+    POST_ITEM = (By.XPATH, "//div[@class='Yl- MIw Hb7']")
+    POST_DOT = (By.XPATH, "//div[@data-test-id='lego-icon-wrapper']")
+    POST_SHARE = (By.XPATH, "//div[@data-test-id='lego-icon-wrapper']")
+    POST_LOVE = (By.XPATH, "//div[@data-test-id='reactions-likeWithCountButton']")
+
+    SAVE = (By.XPATH, "//div[@data-test-id='quick-save-button']")
+    FOLLOW = (By.XPATH, "//div[@data-test-id='user-follow-button']")
+    COMMENT = (By.XPATH, "//div[@data-test-id='editor-with-mentions']")
+    REPLY = (By.XPATH, "//div[@data-test-id='reactions-reply']")
