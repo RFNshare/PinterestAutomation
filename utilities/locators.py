@@ -10,7 +10,7 @@ class SignupLoginPageLocators(object):
     PASS_INPUT = (By.XPATH, "//input[@id='password']")
 
     # Signup By Email
-    AGE_BUTTON = (By.XPATH, "//input[@id='age']")
+    AGE_INPUT = (By.XPATH, "//input[@id='age']")
     SUBMIT_BUTTON = (By.XPATH, "//div[@data-test-id='registerFormSubmitButton']")
 
     # Login/Signup By Facebook

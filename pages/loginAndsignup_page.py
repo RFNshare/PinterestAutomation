@@ -15,7 +15,7 @@ class LoginSignupPage(BasePage):
     def login_btn(self):
         return self.driver.find_element(*self.locators.LOGIN_BUTTON)
 
-    def signup(self):
+    def signup_btn(self):
         return self.driver.find_element(*self.locators.SIGN_UP_BUTTON)
 
     # Login/Signup with Email & Pass input
@@ -27,6 +27,21 @@ class LoginSignupPage(BasePage):
         pass_field = self.driver.find_element(*self.locators.PASS_INPUT)
         pass_field.clear()
         pass_field.send_keys(TestData.DEMO_PASS)
+        self.driver.find_element(*self.locators.SUBMIT_BUTTON).click()
+
+    def signup(self):
+        email_filed = self.driver.find_element(*self.locators.EMAIL_INPUT)
+        email_filed.clear()
+        time.sleep(2)
+        email_filed.send_keys(TestData.DEMO_EMAIL)
+        pass_field = self.driver.find_element(*self.locators.PASS_INPUT)
+        pass_field.clear()
+        time.sleep(2)
+        pass_field.send_keys(TestData.DEMO_PASS)
+        age_field = self.driver.find_element(*self.locators.AGE_INPUT)
+        age_field.clear()
+        age_field.send_keys(TestData.DEMO_AGE)
+        time.sleep(2)
         self.driver.find_element(*self.locators.SUBMIT_BUTTON).click()
 
     def profile(self):
@@ -58,7 +73,6 @@ class LoginSignupPage(BasePage):
         self.driver.find_element(*self.locators.FB_SUBMIT).click()
         time.sleep(5)
         self.driver.switch_to.window(main_page)
-
 
     def g_btn(self):
         return self.driver.find_element(*self.locators.G_BUTTON)
